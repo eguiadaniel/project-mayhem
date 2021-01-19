@@ -1,11 +1,52 @@
-Mayhem Project
+# Mayhem Project
 
-ROUTE Structure
+Required Mongo DB Download [here!](https://www.mongodb.com/try/download/community?tck=docs_server)
 
-PAGE METHOD PATH DESCRIPTION
-Home GET /
-Effects Gallery GET /effects
-Single Effect GET /effects/:id
-Create Custom Video GET /effects/:id/create
-Create Custom Video POST /effects/:id/create
-View Custom Video GET /video/:id
+##ROUTE Structure
+
+<table>
+    <tr>
+      <td>PAGE</td>
+      <td>METHOD</td>
+      <td>PATH</td>
+      <td>DESCRIPTION</td>
+    </tr>
+      <tr>
+      <td>Home</td>
+      <td>GET</td>
+      <td>/</td>
+      <td></td>
+    </tr>
+      <tr>
+      <td>Effects Gallery</td>
+      <td>GET</td>
+      <td>/effects</td>
+      <td></td>
+    </tr>
+      <tr>
+      <td>Single Effect</td>
+      <td>GET</td>
+      <td>/effects/:id</td>
+      <td></td>
+    </tr>
+      <tr>
+      <td>Create Custom Video</td>
+      <td>GET</td>
+      <td>/effects/:id/create</td>
+      <td></td>
+    </tr>
+          <tr>
+      <td>Create Custom Video</td>
+      <td>POST</td>
+      <td>/effects/:id/create</td>
+      <td></td>
+    </tr>
+            <tr>
+      <td>View Custom Video</td>
+      <td>GET</td>
+      <td>/video/:id</td>
+      <td></td>
+    </tr>
+</table>
+
+
