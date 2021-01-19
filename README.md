@@ -39,7 +39,7 @@ Required Mongo DB Download Community version [here!](https://www.mongodb.com/try
       <td>Create Custom Video</td>
       <td>POST</td>
       <td>/effects/:id/create</td>
-      <td>Users input sent to DB</td>
+      <td>Users input sent to DB</br><small>*Route wihtout id for testing</small></td>
     </tr>
             <tr>
       <td>View Custom Video</td>

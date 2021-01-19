@@ -8,6 +8,12 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+// Make express parse request bodies
+app.use(express.urlencoded({ extended: true }));
+
+//Access static files
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   res.render('home');
 });
