@@ -17,15 +17,17 @@ const effectSchema = new mongoose.Schema(
  video_sample: {
   type: String,
   required: true
- }
-// user or creator
+ }  
    
-}, {
-  timestamps {
+}, 
+
+{
+  timestamps: {
     createdAt: 'creationDate',
     updatedAt: 'updateDate'
   }
-});
+}
+);
 
 const Effect = mongoose.model('Effect', effectSchema);
 

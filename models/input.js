@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const inputSchema = new mongoose.Schema({
-  text_1: {
+  text1: {
     type: String,
     required: true
   },
-  text_2: {
+  text2: {
     type: String,
     required: true
   },
@@ -23,7 +23,7 @@ const inputSchema = new mongoose.Schema({
 // user or creator
    
 }, {
-  timestamps {
+  timestamps: {
     createdAt: 'creationDate',
     updatedAt: 'updateDate'
   }

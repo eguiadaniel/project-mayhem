@@ -23,7 +23,7 @@ const outputSchema = new mongoose.Schema({
 // user or creator
    
 }, {
-  timestamps {
+  timestamps: {
     createdAt: 'creationDate',
     updatedAt: 'updateDate'
   }
