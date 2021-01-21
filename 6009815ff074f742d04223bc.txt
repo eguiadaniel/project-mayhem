@@ -1,0 +1,7 @@
+
+    Text 1: Prueba Titulo en Video
+    Text 2: Descubre este efecto es muuuuuy animal!!
+    Effect: test
+    Logo_url: https://straighttwisted.files.wordpress.com/2011/01/horrible-logos-ape-legal.jpg?w=584
+    Creation Date: Thu Jan 21 2021 14:27:59 GMT+0100 (hora estándar de Europa central)
+    
