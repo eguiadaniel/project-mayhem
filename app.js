@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 
-const effectsRouter = require('./routers/effect');
+const effectRouter = require('./routes/effect');
+const inputRouter = require('./routes/input');
 
 const app = express();
 
@@ -18,7 +19,8 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.use(effectsRouter);
+app.use(effectRouter);
+app.use(inputRouter);
 
 app.get('/video/:id', (req, res) => {
   res.render('video-output');

@@ -1,0 +1,21 @@
+<h1>Inputs page</h1>
+
+
+<h2>{{input.text1}}</h2>
+<h4>{{input.text2}}</h4>
+
+
+</br>
+{{#if input.logo_url}}
+ <img src="{{input.logo_url}}" alt="{{input.text1}}">
+<a href="{{input.logo_url}}" target="_blank">See logo image</a>
+{{/if}}
+</br>
+<small>Effect type: {{input.effect_id}}</small>
+{{#if input.image}}
+  <img src="{{input.image}}" alt="{{input.title}}">
+{{/if}}
+</br>
+<a href="/input/{{input._id}}/delete">Delete input</a>
+</br>
+<a href="/input/{{input._id}}/update">Update Resource</a>

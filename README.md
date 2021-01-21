@@ -2,7 +2,10 @@
 
 Required Mongo DB Download Community version [here!](https://www.mongodb.com/try/download/community?tck=docs_server)
 
-## ROUTE Structure
+## Run server 
+$ npm run dev
+
+## Route Structure
 
 <table>
     <tr>
