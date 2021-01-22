@@ -5,7 +5,6 @@ const Input = require('../models/input')
 
 const effectRouter = new express.Router();
 
-
 effectRouter.get('/effect/gallery', (req, res, next)=> {
   res.render('effect-gallery')
 });
@@ -27,19 +26,25 @@ effectRouter.post('/effect/create', (req, res, next)=> {
     logo_url: data.logo_url || undefined,
     effect_id: 'test'
   })
+  
   .then((input)=>{
-    let completeText = 
-    `
-    Text 1: ${input.text1}
-    Text 2: ${input.text2}
-    Effect: ${input.effect_id}
-    Logo_url: ${input.logo_url}
-    Creation Date: ${input.creationDate}
-    `;
-    fs.writeFile(`${input.id}.txt`, completeText, function (err) {
+        let fileContent = input.text1;
+
+  }).then(() =>{
+    fs.mkdir('/tmp/a/apple', { recursive: true }, (err) => {
       if (err) throw err;
-      console.log('File is created successfully.');
-    }); 
+    });
+
+  }).then(() => {
+    fs.writeFile('/tmp/a/apple', fileContent, (error) => {
+      if (error) {
+        console.log("An error ocurred creating your file: ", error);
+      } else {
+        console.log("File is created successfully.");
+      }
+    });
+
+  }).then(() =>{
     res.redirect(`/input/${input._id}`);
 
   })
