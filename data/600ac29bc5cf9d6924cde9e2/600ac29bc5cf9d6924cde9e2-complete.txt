@@ -1,0 +1,7 @@
+
+    Text 1: Demo texto 1 para Juae y Portillo
+    Text 2: Párrafo 2 desde 10 hasta 140 caracteres
+    Effect: test
+    Logo_url: https://cdn.logo.com/hotlink-ok/logo-social.png
+    Creation Date: Fri Jan 22 2021 13:18:35 GMT+0100 (hora estándar de Europa central)
+    

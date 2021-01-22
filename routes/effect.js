@@ -2,6 +2,9 @@ const express = require('express');
 const { create } = require('../models/effect');
 const fs = require('fs');
 const Input = require('../models/input')
+const path = require('path')
+
+
 
 const effectRouter = new express.Router();
 
@@ -14,6 +17,7 @@ effectRouter.get('/effect/create', (req, res, next)=> {
   const id = req.params.id;
   res.render('effect-create')
 });
+
 
 effectRouter.post('/effect/create', (req, res, next)=> {
 
@@ -36,10 +40,32 @@ effectRouter.post('/effect/create', (req, res, next)=> {
     Logo_url: ${input.logo_url}
     Creation Date: ${input.creationDate}
     `;
-    fs.writeFile(`${input.id}.txt`, completeText, function (err) {
+
+    fs.mkdir(`data/${input.id}` , { recursive: true }, (err) => {
+      if (err) throw err;
+    });
+    
+    fs.writeFile(`./data/${input.id}/${input.id}-complete.txt`, completeText, function (err) {
       if (err) throw err;
       console.log('File is created successfully.');
     }); 
+
+    fs.writeFile(`./data/${input.id}/${input.id}-text1.txt`, input.text1, function (err) {
+      if (err) throw err;
+      console.log('File is created successfully.');
+    }); 
+
+    fs.writeFile(`./data/${input.id}/${input.id}-text2.txt`, input.text2, function (err) {
+      if (err) throw err;
+      console.log('File is created successfully.');
+    }); 
+
+    fs.writeFile(`./data/${input.id}/${input.id}-logo_url.txt`, input.logo_url, function (err) {
+      if (err) throw err;
+      console.log('File is created successfully.');
+    }); 
+
+
     res.redirect(`/input/${input._id}`);
 
   })
