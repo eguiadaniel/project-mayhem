@@ -45,25 +45,29 @@ effectRouter.post('/effect/create', (req, res, next)=> {
       if (err) throw err;
     });
     
-    fs.writeFile(`./data/${input.id}/${input.id}-complete.txt`, completeText, function (err) {
-      if (err) throw err;
-      console.log('File is created successfully.');
-    }); 
+    setTimeout(() => { 
+      
+      fs.writeFile(`./data/${input.id}/${input.id}-complete.txt`, completeText, function (err) {
+        if (err) throw err;
+        console.log('File is created successfully.');
+      }); 
+    
+      fs.writeFile(`./data/${input.id}/${input.id}-text1.txt`, input.text1, function (err) {
+        if (err) throw err;
+        console.log('File is created successfully.');
+      }); 
+    
+      fs.writeFile(`./data/${input.id}/${input.id}-text2.txt`, input.text2, function (err) {
+        if (err) throw err;
+        console.log('File is created successfully.');
+      }); 
+    
+      fs.writeFile(`./data/${input.id}/${input.id}-logo_url.txt`, input.logo_url, function (err) {
+        if (err) throw err;
+        console.log('File is created successfully.');
+      }); 
+  }, 1000);
 
-    fs.writeFile(`./data/${input.id}/${input.id}-text1.txt`, input.text1, function (err) {
-      if (err) throw err;
-      console.log('File is created successfully.');
-    }); 
-
-    fs.writeFile(`./data/${input.id}/${input.id}-text2.txt`, input.text2, function (err) {
-      if (err) throw err;
-      console.log('File is created successfully.');
-    }); 
-
-    fs.writeFile(`./data/${input.id}/${input.id}-logo_url.txt`, input.logo_url, function (err) {
-      if (err) throw err;
-      console.log('File is created successfully.');
-    }); 
 
 
     res.redirect(`/input/${input._id}`);
